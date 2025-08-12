@@ -1,21 +1,23 @@
 package org.example;
 
 public class Computer {
-    String brand;
-    int ramInGB;
+    private String brand;
+    private int ramInGB;
 
-    public Computer(){
-        brand = "Generic";
-        ramInGB = 8;
+    public Computer() {
+        this("Generic", 8);
     }
 
-    public Computer(String brand){
-        this();
-        this.brand = brand;
+    public Computer(String brand) {
+        this(brand, 8);
     }
 
-    public Computer(String brand, int ramInGB){
+    public Computer(String brand, int ramInGB) {
         this.brand = brand;
         this.ramInGB = ramInGB;
+    }
+
+    public void displayDetails() {
+        System.out.println("Brand: " + brand + ", RAM: " + ramInGB + "GB");
     }
 }
